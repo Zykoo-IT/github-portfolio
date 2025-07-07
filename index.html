@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <main id="main-content"></main>
+    
+    
+
+
+</body>
+</html>
+    <script type="text/javascript">
+    	// When the page loads, display the home page content by default
+        window.onload = function() {
+            loadHome();
+        };
+
+        function loadHome() {
+            const content = document.getElementById('main-content');
+            content.innerHTML = `
+            <section class="home">
+                <header>
+		        <a href="index.html" class="logo">Ichan</a>
+
+			        <nav>
+			            <a href="#" class="active" onclick="loadHome()">Home</a>
+			            <a href="#" onclick="loadProjects()">My Projects</a>
+			            <a href="#" onclick="loadTimeline()">Timeline</a>
+			            <a href="#" onclick="loadContact()">Contact</a>
+			        </nav>
+			    </header>
+                <div class="home-img">
+                    <img src="berserk.png">
+                </div>
+                <div class="home-content">
+                    <h1>Hi I'm <span>Ichan</span></h1>
+                    <h3 class="typewritter">I am a <span></span></h3>
+                    <p></p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/christian-joshua-villanueva-248548209/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Zykoo-IT"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://web.facebook.com/cjoxhua"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/Psychop36844367"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </section>
+            `;
+        }
+
+        function loadProjects() {
+            const content = document.getElementById('main-content');
+            content.innerHTML = `
+                <section class="home">
+                <header>
+            	<a href="index.html" class="logo">Ichan</a>
+
+			        <nav>
+			            <a href="#" onclick="loadHome()">Home</a>
+			            <a href="#" class="active" onclick="loadProjects()">My Projects</a>
+			            <a href="#" onclick="loadTimeline()">Timeline</a>
+			            <a href="#" onclick="loadContact()">Contact</a>
+			        </nav>
+			    </header>
+
+                    
+
+                    <div class="home-content home-gallery">
+                    <h1>My Projects</h1>
+                    <div class="gallery">
+                        <a href="https://drive.google.com/file/d/1yippRZ9vcAZ2pDexh3mDfWamJ0U4Uj9d/view?usp=sharing"><img src="projects/monk-diamond.png" alt="Project 1">
+                        <p>Monk Diamond</p></a>
+
+                        <a href="https://www.figma.com/design/0OjVtCOXsOOFUGXIpfszYu/Untitled?node-id=0-1&node-type=CANVAS&t=4uWyr1t5gZlgY9iN-0"><img src="projects/chef-figma.png" alt="Project 2"></a>
+                        <p>Chef-Figma one of the midterm project</p>
+                    </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        function loadTimeline() {
+            const content = document.getElementById('main-content');
+            content.innerHTML = `
+                <section class="home">
+                <header>
+            	<a href="index.html" class="logo">Ichan</a>
+			        <nav>
+			            <a href="#" onclick="loadHome()">Home</a>
+			            <a href="#" onclick="loadProjects()">My Projects</a>
+			            <a href="#" class="active" onclick="loadTimeline()">Timeline</a>
+			            <a href="#" onclick="loadContact()">Contact</a>
+			        </nav>
+			    </header>
+                <h2 class="heading">Education</h2>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2023-2024</div>
+                            <div class="timeline-content">
+                                <h3>DIT 3rd Year(Graduating)</h3>
+                                <p>Learning Web Development and Figma design. Can create a functionable website </p>
+                            </div>    
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2022-2023</div>
+                            <div class="timeline-content">
+                                <h3>DIT 2nd Year</h3>
+                                <p>Database with a little bit of PHP.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2021-2022</div>
+                            <div class="timeline-content">
+                                <h3>DIT 1st Year</h3>
+                                <p>Basic HTML, Javascript, CSS.</p>
+                            </div>
+                        </div>  
+                    </div>
+                </section>
+            `;
+        }
+
+        function loadContact() {
+            const content = document.getElementById('main-content');
+            content.innerHTML = `
+                <section class="home">
+                <header>
+           	    <a href="index.html" class="logo">Ichan</a>
+			        <nav>
+			            <a href="#" onclick="loadHome()">Home</a>
+			            <a href="#" onclick="loadProjects()">My Projects</a>
+			            <a href="#" onclick="loadTimeline()">Timeline</a>
+			            <a href="#" class="active" onclick="loadContact()">Contact</a>
+			        </nav>
+			    </header>
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            `;
+
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Form Submitted!');
+            });
+        }
+
+    </script>
